@@ -33,7 +33,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSh-bN-MbQ">
-                                <rect key="frame" x="144" y="66" width="32" height="27"/>
+                                <rect key="frame" x="118" y="66" width="32" height="27"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W7-Ci-ju5">
-                                <rect key="frame" x="144" y="190" width="32" height="27"/>
+                                <rect key="frame" x="118" y="190" width="32" height="27"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbd-ab-gUX">
-                                <rect key="frame" x="144" y="314" width="32" height="27"/>
+                                <rect key="frame" x="119" y="314" width="32" height="27"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,12 +84,12 @@
                             <constraint firstItem="bhb-QY-I8R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="62t-eR-StQ"/>
                             <constraint firstItem="CSm-ot-cUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="BPe-pt-dl4"/>
                             <constraint firstItem="xSh-bN-MbQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="Dud-nF-0MU"/>
-                            <constraint firstItem="xSh-bN-MbQ" firstAttribute="leading" secondItem="lUN-ve-OQO" secondAttribute="trailing" constant="71" id="Dx3-kE-rdt"/>
+                            <constraint firstItem="xSh-bN-MbQ" firstAttribute="leading" secondItem="lUN-ve-OQO" secondAttribute="trailing" constant="45" id="Dx3-kE-rdt"/>
                             <constraint firstItem="f3x-88-e6i" firstAttribute="top" secondItem="lUN-ve-OQO" secondAttribute="bottom" constant="31" id="FJ8-KZ-QvJ"/>
                             <constraint firstAttribute="bottom" secondItem="bhb-QY-I8R" secondAttribute="bottom" id="JOb-mV-btg"/>
                             <constraint firstItem="lUN-ve-OQO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Jf1-zZ-qMx"/>
                             <constraint firstItem="T3o-u1-IUO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Jpa-dP-rRV"/>
-                            <constraint firstItem="Lbd-ab-gUX" firstAttribute="leading" secondItem="CSm-ot-cUd" secondAttribute="trailing" constant="67" id="NDn-wC-sMw"/>
+                            <constraint firstItem="Lbd-ab-gUX" firstAttribute="leading" secondItem="CSm-ot-cUd" secondAttribute="trailing" constant="42" id="NDn-wC-sMw"/>
                             <constraint firstItem="bhb-QY-I8R" firstAttribute="top" secondItem="cEz-gH-04h" secondAttribute="bottom" constant="83" id="Nir-Oe-hmn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KHm-jN-ZEb" secondAttribute="trailing" constant="25" id="Ta2-Jo-hx3"/>
                             <constraint firstItem="cEz-gH-04h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="VIj-10-oKI"/>
@@ -103,7 +103,7 @@
                             <constraint firstItem="1W7-Ci-ju5" firstAttribute="top" secondItem="f3x-88-e6i" secondAttribute="bottom" constant="36" id="v8g-4U-7Y0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f3x-88-e6i" secondAttribute="trailing" constant="25" id="xec-OM-Enu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhb-QY-I8R" secondAttribute="trailing" id="y0H-ig-9Oz"/>
-                            <constraint firstItem="1W7-Ci-ju5" firstAttribute="leading" secondItem="T3o-u1-IUO" secondAttribute="trailing" constant="51" id="yUV-UZ-ZBc"/>
+                            <constraint firstItem="1W7-Ci-ju5" firstAttribute="leading" secondItem="T3o-u1-IUO" secondAttribute="trailing" constant="25" id="yUV-UZ-ZBc"/>
                         </constraints>
                     </view>
                     <connections>

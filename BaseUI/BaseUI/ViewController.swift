@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewOfColors: UIView!
     
     var redColor: Float = 0
+    
     var greenColor: Float = 0
+    
     var blueColor: Float = 0
     
     
@@ -33,10 +35,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        redColor = Float(redSlider.value)
+        greenColor = Float(greenSlider.value)
+        blueColor = Float(blueSlider.value)
+        changeColorView(red: redColor, green: greenColor, blue: blueColor)
         valueOfRedSlider.text = String(redSlider.value)
         valueOfGreenSlider.text = String(greenSlider.value)
         valueOfBlueSlider.text = String(blueSlider.value)
-
     }
 
     func changeColorView(red: Float, green: Float, blue: Float) {
