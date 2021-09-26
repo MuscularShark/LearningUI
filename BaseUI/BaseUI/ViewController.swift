@@ -45,6 +45,12 @@ class ViewController: UIViewController {
     }
     
 // MARK: - Changes to the view regarding colors.
+    /// This method change background color for attached view for specific slider.
+    ///
+    /// - Parameter red: Value of red color in the range 0 - 1 from UIColor.
+    /// - Parameter green: Value of green color in the range 0 - 1 from UIColor.
+    /// - Parameter blue: Value of blue color in the range 0 - 1 from UIColor.
+    
     
     func changeColorView(red: Float, green: Float, blue: Float) {
         if red != 0 || green != 0 || blue != 0 {
@@ -59,6 +65,9 @@ class ViewController: UIViewController {
     }
 
 //MARK: - Changes to text relative to slider values.
+    /// This method change text for attached label for specific slider.
+    ///
+    /// - Parameter sender: The specific slider.
     
     func changeText(_ sender: UISlider?){
         if let sender = sender{
@@ -84,6 +93,9 @@ class ViewController: UIViewController {
     }
     
 // MARK: - Changes sliders tint color.
+    /// This method change tintColor  for specific slider.
+    ///
+    /// - Parameter sender: The specific slider.
     
     func changeColorOfSlider(_ sender: UISlider?) {
         if let sender = sender{
@@ -109,6 +121,9 @@ class ViewController: UIViewController {
     }
     
 // MARK: - Universal func for all sliders.
+    /// This method call methods for specific slider.
+    ///
+    /// - Parameter sender: The specific slider.
     
     @IBAction func changeWithSliders(_ sender: UISlider) {
         switch sender.tag {
