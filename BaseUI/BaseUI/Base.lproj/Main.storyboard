@@ -26,10 +26,10 @@
                                 <rect key="frame" x="0.0" y="485" width="390" height="359"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f3x-88-e6i">
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f3x-88-e6i">
                                 <rect key="frame" x="23" y="124" width="344" height="31"/>
                                 <connections>
-                                    <action selector="changeRedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="UAA-4p-YE1"/>
+                                    <action selector="changeWithSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="I0c-ms-eGa"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSh-bN-MbQ">
@@ -44,10 +44,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KHm-jN-ZEb">
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KHm-jN-ZEb">
                                 <rect key="frame" x="23" y="248" width="344" height="31"/>
                                 <connections>
-                                    <action selector="changeGreenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ApY-H3-IWr"/>
+                                    <action selector="changeWithSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q40-3p-eqc"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W7-Ci-ju5">
@@ -62,10 +62,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-gH-04h">
+                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-gH-04h">
                                 <rect key="frame" x="23" y="372" width="344" height="31"/>
                                 <connections>
-                                    <action selector="changeBlueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="af0-rl-WB0"/>
+                                    <action selector="changeWithSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="5uP-9k-gre"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbd-ab-gUX">
