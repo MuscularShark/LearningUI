@@ -37,8 +37,6 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        textFieldGender.textColor = .black
-        textFieldBirth.textColor = .black
     }
     
     //MARK: - Method for change Image View
@@ -56,7 +54,6 @@ class ViewController: UIViewController {
         pickerBirhday.preferredDatePickerStyle = .wheels
         pickerBirhday.maximumDate = Date()
         pickerBirhday.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
-        textFieldBirth.textColor = .systemBlue
     }
         
     //MARK: - Method of date format
@@ -87,7 +84,6 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         textFieldGender.text = arrayOfGender[row]
-        textFieldGender.textColor = .systemBlue
     }
 }
 
