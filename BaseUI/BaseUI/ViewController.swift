@@ -89,12 +89,12 @@ extension ViewController: UITextFieldDelegate {
     /// This method set restriction for textfield
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            guard let text = textField.text,
-                  let textValue = Float(text + string)
-            else { return false }
-            if textValue > 255 {
-                return false
-            }
+        guard let text = textField.text,
+              let textValue = Float(text + string)
+        else { return false }
+        if textValue > 255 {
+            return false
+        }
             return true
         }
         
