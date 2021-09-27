@@ -177,10 +177,13 @@ extension ViewController: UITextFieldDelegate {
         switch textField.tag {
         case 1:
             redSlider.value = Float(redTextField.text ?? " ") ?? 0.0
+            changeColorOfSlider(redSlider)
         case 2:
             greenSlider.value = Float(greenTextField.text ?? " ") ?? 0.0
+            changeColorOfSlider(greenSlider)
         case 3:
             blueSlider.value = Float(blueTextfield.text ?? " ") ?? 0.0
+            changeColorOfSlider(blueSlider)
         default:
             print("Error")
         }
