@@ -10,23 +10,23 @@ import UIKit
 class ViewController: UIViewController {
 
 
-    @IBOutlet weak var redTextField: UITextField!
+    @IBOutlet private weak var redTextField: UITextField!
     
-    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet private weak var redSlider: UISlider!
     
-    @IBOutlet weak var greenTextField: UITextField!
+    @IBOutlet private weak var greenTextField: UITextField!
     
-    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet private weak var greenSlider: UISlider!
     
-    @IBOutlet weak var blueTextfield: UITextField!
+    @IBOutlet private weak var blueTextfield: UITextField!
     
-    @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet private weak var blueSlider: UISlider!
     
-    @IBOutlet weak var viewOfColors: UIView!
+    @IBOutlet private weak var viewOfColors: UIView!
     
 /// Constant for max range RGB colors
     
-    let valueCG: CGFloat = 255
+    private let valueCG: CGFloat = 255
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +92,7 @@ extension ViewController: UITextFieldDelegate {
         guard let text = textField.text,
               let textValue = Float(text + string)
         else { return false }
-        if textValue > 255 {
+        if textValue > Float(valueCG) {
             return false
         }
             return true
