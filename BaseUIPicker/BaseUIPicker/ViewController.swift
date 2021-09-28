@@ -9,19 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var textFieldGender: UITextField!
+    @IBOutlet private weak var textFieldGender: UITextField!
     
-    @IBOutlet weak var textFieldBirth: UITextField!
+    @IBOutlet private weak var textFieldBirth: UITextField!
     
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet private weak var profileImage: UIImageView!
     
-    let pickerGender = UIPickerView()
+    private let pickerGender = UIPickerView()
     
-    let pickerBirhday = UIDatePicker()
+    private let pickerBirhday = UIDatePicker()
     
     ///Values for UIPickerView (pickerGender)
     
-    var arrayOfGender = ["Female", "Male", "Unknown"]
+    private var arrayOfGender = ["Female", "Male", "Unknown"]
     
     
     override func viewDidLoad() {
@@ -41,14 +41,14 @@ class ViewController: UIViewController {
     
     //MARK: - Method for change Image View
     
-    func changeImage() {
+    private func changeImage() {
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         profileImage.contentMode = .scaleAspectFit
     }
     
     //MARK: - Method of DatePicker
     
-    func datePickerView() {
+    private func datePickerView() {
         textFieldBirth.inputView = pickerBirhday
         pickerBirhday.datePickerMode = .date
         pickerBirhday.preferredDatePickerStyle = .wheels
