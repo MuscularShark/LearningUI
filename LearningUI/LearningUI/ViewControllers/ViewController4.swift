@@ -21,7 +21,4 @@ class ViewController4: UIViewController {
         self.navigationController?.pushViewController(fiveViewController, animated: true)
     }
     
-    @IBAction func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
 }
