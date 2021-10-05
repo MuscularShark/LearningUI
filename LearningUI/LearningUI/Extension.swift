@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension UIStoryboard {
-    
     static func instantiateViewController<T: UIViewController>() -> T {
           let main = UIStoryboard(name: "Main", bundle: nil)
           
@@ -18,11 +17,10 @@ extension UIStoryboard {
               }
               return viewController
           }
-      
 }
 
 extension UIViewController {
-  class var identifier: String {
-    return String(describing: self)
-  }
+    class var identifier: String {
+        return String(describing: self)
+    }
 }
