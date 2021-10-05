@@ -11,11 +11,10 @@ class ViewController5: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.title = "Fifth ViewController"
     }
     
-    @IBAction func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
+    @IBAction private func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 

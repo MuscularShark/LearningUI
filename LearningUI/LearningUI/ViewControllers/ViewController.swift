@@ -14,13 +14,13 @@ class ViewController: UIViewController {
         self.title = "First ViewController"
     }
     
-    @IBAction func goToSecondScreenTouchUpInside(_ sender: UIButton) {
+    @IBAction private func goToSecondScreenTouchUpInside(_ sender: UIButton) {
         let secondViewController: SecondUIViewController = UIStoryboard.instantiateViewController()
         
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
-    @IBAction func goToThirdScreenTouchUpInside(_ sender: UIButton) {
+    @IBAction private func goToThirdScreenTouchUpInside(_ sender: UIButton) {
         let thirdViewController: ThirdUIViewController = UIStoryboard.instantiateViewController()
         
         thirdViewController.modalPresentationStyle = .fullScreen
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func goToFourScreenTouchUpInside(_ sender: UIButton) {
+    @IBAction private func goToFourScreenTouchUpInside(_ sender: UIButton) {
         let fourViewController: ViewController4 = UIStoryboard.instantiateViewController()
         let navVC = UINavigationController(rootViewController: fourViewController)
         

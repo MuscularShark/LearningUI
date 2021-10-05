@@ -14,14 +14,14 @@ class ViewController4: UIViewController {
         self.title = "Fourth ViewController"
     }
     
-    
     @IBAction private func makeNavController() {
         let fiveViewController: ViewController5 = UIStoryboard.instantiateViewController()
        
         self.navigationController?.pushViewController(fiveViewController, animated: true)
     }
     
-    @IBAction func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
+    @IBAction private func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
         dismiss(animated: true)
     }
+    
 }

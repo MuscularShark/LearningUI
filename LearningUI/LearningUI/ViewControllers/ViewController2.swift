@@ -11,9 +11,10 @@ class SecondUIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Second ViewController"    }
+        self.title = "Second ViewController"
+    }
     
-    @IBAction func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
+    @IBAction private func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 
