@@ -12,7 +12,7 @@ protocol SecondViewControllerDelegate: AnyObject {
 }
 
 class SecondViewController: UIViewController {
-
+    
     @IBOutlet weak private var textFieldSecondVC: UITextField!
     
     weak var delegate: SecondViewControllerDelegate?
@@ -24,13 +24,11 @@ class SecondViewController: UIViewController {
         textFieldSecondVC.text = textToTextField
         textFieldSecondVC.delegate = self
     }
-    
 }
 
 extension SecondViewController: UITextFieldDelegate  {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
         
         delegate?.delegateSecondVC(self, didUpdate: textFieldSecondVC.text ?? " ")

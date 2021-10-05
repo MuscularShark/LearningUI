@@ -37,19 +37,19 @@ class ViewController: UIViewController {
            default:
                print("Error")
         }
-       
         self.navigationController?.pushViewController(secondVC, animated: true)
     }
-    
 }
 
 extension ViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
 }
 
 extension ViewController: SecondViewControllerDelegate {
+    
     func delegateSecondVC(_ viewController: UIViewController, didUpdate text: String) {
         textField.text = text
     }
