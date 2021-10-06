@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,36 +18,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Images" translatesAutoresizingMaskIntoConstraints="NO" id="V62-3o-MK3">
-                                <rect key="frame" x="109" y="306.5" width="196" height="293"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-Kf-ybG">
+                                <rect key="frame" x="101" y="276.5" width="212" height="353"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="293" id="5oH-p1-dqM"/>
-                                    <constraint firstAttribute="width" constant="196" id="sSM-zO-eok"/>
+                                    <constraint firstAttribute="width" constant="212" id="8tz-xC-3qm"/>
+                                    <constraint firstAttribute="height" constant="353" id="dUh-8R-50H"/>
                                 </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1453486485176659442" translatesAutoresizingMaskIntoConstraints="NO" id="SiI-pi-cyn">
-                                <rect key="frame" x="101" y="272" width="212" height="353"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAc-hQ-t6h">
+                                <rect key="frame" x="88" y="238.5" width="238" height="429"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backCard" translatesAutoresizingMaskIntoConstraints="NO" id="dxA-n8-iIX">
+                                        <rect key="frame" x="4" y="41" width="230" height="347"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faceCard" translatesAutoresizingMaskIntoConstraints="NO" id="SiI-pi-cyn">
+                                        <rect key="frame" x="4" y="41" width="230" height="347"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="353" id="fEd-36-rqJ"/>
-                                    <constraint firstAttribute="width" constant="212" id="z2R-UL-I09"/>
+                                    <constraint firstItem="SiI-pi-cyn" firstAttribute="leading" secondItem="cAc-hQ-t6h" secondAttribute="leading" constant="4" id="25w-KB-BiZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="SiI-pi-cyn" secondAttribute="bottom" constant="41" id="RgE-vL-dzS"/>
+                                    <constraint firstAttribute="width" constant="238" id="VP7-ED-QQi"/>
+                                    <constraint firstAttribute="height" constant="429" id="hVZ-IM-hyW"/>
+                                    <constraint firstAttribute="trailing" secondItem="SiI-pi-cyn" secondAttribute="trailing" constant="4" id="n9H-Xh-ACt"/>
+                                    <constraint firstItem="SiI-pi-cyn" firstAttribute="top" secondItem="cAc-hQ-t6h" secondAttribute="top" constant="41" id="w49-9H-ChM"/>
                                 </constraints>
-                            </imageView>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JE1-NA-5RX">
+                                <rect key="frame" x="80" y="101" width="254" height="21"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyX-yd-wKj">
+                                <rect key="frame" x="163" y="412" width="88" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="Luq-Gj-WWl"/>
+                                    <constraint firstAttribute="height" constant="82" id="XlR-Ux-8aM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=".">
+                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                        <imageReference key="image" image="repeat.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                            <hierarchicalColors>
+                                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color systemColor="secondaryLabelColor"/>
+                                                <color systemColor="tertiaryLabelColor"/>
+                                            </hierarchicalColors>
+                                        </imageReference>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickTry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwo-04-mQc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="V62-3o-MK3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MDx-zm-BhU"/>
-                            <constraint firstItem="SiI-pi-cyn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UHC-O3-Juh"/>
-                            <constraint firstItem="SiI-pi-cyn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b0D-xb-MxI"/>
-                            <constraint firstItem="V62-3o-MK3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="dPg-Dp-7q3"/>
+                            <constraint firstItem="QaY-Kf-ybG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3wO-Lq-VgA"/>
+                            <constraint firstItem="JE1-NA-5RX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="1.5" constant="35" id="Cc8-to-7z0"/>
+                            <constraint firstItem="cAc-hQ-t6h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FUq-oW-498"/>
+                            <constraint firstItem="CyX-yd-wKj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Nin-VW-hwe"/>
+                            <constraint firstItem="QaY-Kf-ybG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Oms-pb-aBH"/>
+                            <constraint firstItem="CyX-yd-wKj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PaX-1G-ifC"/>
+                            <constraint firstItem="cAc-hQ-t6h" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aWU-Wf-PCe"/>
+                            <constraint firstItem="JE1-NA-5RX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="h49-A2-Eph"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JE1-NA-5RX" secondAttribute="trailing" constant="80" id="nKq-Ng-9Pg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstCard" destination="V62-3o-MK3" id="drs-gy-OVe"/>
+                        <outlet property="backCard" destination="QaY-Kf-ybG" id="cMp-d4-hfe"/>
+                        <outlet property="cardView" destination="cAc-hQ-t6h" id="7bS-R9-zIs"/>
+                        <outlet property="constraintX" destination="FUq-oW-498" id="8oy-o9-Ej8"/>
+                        <outlet property="constraintY" destination="aWU-Wf-PCe" id="aYw-Bb-Vbw"/>
+                        <outlet property="firstCard" destination="dxA-n8-iIX" id="Ipp-EC-eJJ"/>
+                        <outlet property="hints" destination="JE1-NA-5RX" id="zK0-iV-fZ2"/>
                         <outlet property="seconCard" destination="SiI-pi-cyn" id="mWj-WW-gSD"/>
+                        <outlet property="tryBtn" destination="CyX-yd-wKj" id="8td-Fc-wHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -53,7 +111,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1453486485176659442" width="200" height="303"/>
-        <image name="Images" width="375" height="518"/>
+        <image name="backCard" width="200" height="303"/>
+        <image name="card" width="200" height="303"/>
+        <image name="faceCard" width="200" height="303"/>
+        <image name="repeat.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
