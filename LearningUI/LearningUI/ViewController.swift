@@ -67,7 +67,7 @@ class ViewController: UIViewController {
                     viewOfCard.transform = CGAffineTransform.identity.scaledBy(x: 1.8, y: 1.8)
                 }
                 else {
-                    viewOfCard.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1)
+                    viewOfCard.transform = CGAffineTransform.identity
                 }
             })
         }
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     private func addCard(card: UIView) {
         card.transform = CGAffineTransform.identity.scaledBy(x: 1.2, y: 1.2).rotated(by: 0)
         UIView.animate(withDuration: 1.9, animations: {
-            card.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1)
+            card.transform = CGAffineTransform.identity
         })
     }
     
