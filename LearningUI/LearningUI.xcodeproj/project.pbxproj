@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CCED2FB270F38B600412BAD /* AlertExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCED2FA270F38B600412BAD /* AlertExtansion.swift */; };
 		5CCF781F27030BD400D8B8C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF781E27030BD400D8B8C1 /* AppDelegate.swift */; };
 		5CCF782127030BD400D8B8C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF782027030BD400D8B8C1 /* SceneDelegate.swift */; };
 		5CCF782327030BD400D8B8C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF782227030BD400D8B8C1 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CCED2FA270F38B600412BAD /* AlertExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtansion.swift; sourceTree = "<group>"; };
 		5CCF781B27030BD400D8B8C1 /* LearningUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCF781E27030BD400D8B8C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CCF782027030BD400D8B8C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				5CCF781E27030BD400D8B8C1 /* AppDelegate.swift */,
 				5CCF782027030BD400D8B8C1 /* SceneDelegate.swift */,
 				5CCF782227030BD400D8B8C1 /* ViewController.swift */,
+				5CCED2FA270F38B600412BAD /* AlertExtansion.swift */,
 				5CCF782427030BD400D8B8C1 /* Main.storyboard */,
 				5CCF782727030BD500D8B8C1 /* Assets.xcassets */,
 				5CCF782927030BD500D8B8C1 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				5CCF782327030BD400D8B8C1 /* ViewController.swift in Sources */,
 				5CCF781F27030BD400D8B8C1 /* AppDelegate.swift in Sources */,
 				5CCF782127030BD400D8B8C1 /* SceneDelegate.swift in Sources */,
+				5CCED2FB270F38B600412BAD /* AlertExtansion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

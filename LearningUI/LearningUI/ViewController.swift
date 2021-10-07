@@ -14,71 +14,67 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showSimpleAlert(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Sign Out?", message: "You can always access your content by signing back in", preferredStyle: .alert)
-        
         let signOutBtn = UIAlertAction(title: "Sign out", style: .default, handler: nil)
         let cancelBtn = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         
-        alert.addAction(cancelBtn)
-        alert.addAction(signOutBtn)
-        
-        present(alert, animated: true, completion: nil)
+        alert(
+            title: "Sign Out?",
+            message: "You can always access your content by signing back in",
+            action: signOutBtn, cancelBtn,
+            type: .alert
+        )
     }
     
     @IBAction func showActionSheetAlert(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Title", message: "Please Select an Option", preferredStyle: .actionSheet)
-        
         let approveBtn = UIAlertAction(title: "Approve", style: .default, handler: nil)
         let editBtn = UIAlertAction(title: "Edit", style: .default, handler: nil)
         let deleteBtn = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
         let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
         
-        alert.addAction(approveBtn)
-        alert.addAction(editBtn)
-        alert.addAction(deleteBtn)
-        alert.addAction(dismiss)
-        
-        present(alert, animated: true, completion: nil)
+        alert(
+            title: "Title",
+            message: "Please Select an Option",
+            action: approveBtn, editBtn, deleteBtn, dismiss,
+            type: .actionSheet
+        )
     }
     
     @IBAction func showAlertWithDestractiveBtn(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Sign Out?", message: "You can always access your content by signing back in", preferredStyle: .alert)
-        
         let signOutBtn = UIAlertAction(title: "Sign out", style: .destructive, handler: nil)
         let cancelBtn = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         
-        alert.addAction(cancelBtn)
-        alert.addAction(signOutBtn)
-        
-        present(alert, animated: true, completion: nil)
+        alert(title: "Sign Out?",
+              message: "You can always access your content by signing back in",
+              action: signOutBtn, cancelBtn,
+              type: .alert
+        )
     }
     
     @IBAction func showAlertTwoBtn(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Alert", message: "Alert with more than 2 buttons", preferredStyle: .alert)
-        
         let defaultBtn = UIAlertAction(title: "Default", style: .default, handler: nil)
         let cancelBtn = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         let destructiveBtn = UIAlertAction(title: "Destructive", style: .destructive, handler: nil)
         
-        alert.addAction(defaultBtn)
-        alert.addAction(cancelBtn)
-        alert.addAction(destructiveBtn)
-        
-        present(alert, animated: true, completion: nil)
+        alert(
+            title: "Alert",
+            message: "Alert with more than 2 buttons",
+            action: defaultBtn, cancelBtn, destructiveBtn,
+            type: .alert
+        )
     }
     
     @IBAction func showAlertTextField(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Alert", message: "Alert with textfield", preferredStyle: .alert)
-        
         let defaultBtn = UIAlertAction(title: "Enter", style: .default, handler: nil)
         let cancelBtn = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        alert.addTextField(configurationHandler: nil)
-        alert.addAction(cancelBtn)
-        alert.addAction(defaultBtn)
-        
-        present(alert, animated: true, completion: nil)
+        alertWithTextfield(
+            title: "Alert",
+            message: "Alert with textfield",
+            action: defaultBtn, cancelBtn,
+            type: .alert,
+            configurationHandlerTF: nil
+        )
     }
-    
 }
+
 
