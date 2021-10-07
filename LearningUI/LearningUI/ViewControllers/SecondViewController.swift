@@ -8,12 +8,12 @@
 import UIKit
 
 protocol SecondViewControllerDelegate: AnyObject {
-    func delegateSecondVC(_ viewController: UIViewController, didUpdate text: String)
+    func textFieldReturn(_ viewController: UIViewController, didUpdate text: String)
 }
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak private var textFieldSecondVC: UITextField!
+    @IBOutlet weak private var inputTextField: UITextField!
     
     weak var delegate: SecondViewControllerDelegate?
     
@@ -21,20 +21,21 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFieldSecondVC.text = textToTextField
-        textFieldSecondVC.delegate = self
+        inputTextField.text = textToTextField
+        setUpDelegate()
+    }
+    
+    private func setUpDelegate() {
+        inputTextField.delegate = self
     }
 }
 
 extension SecondViewController: UITextFieldDelegate  {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
-        delegate?.delegateSecondVC(self, didUpdate: textFieldSecondVC.text ?? " ")
-        
+        delegate?.textFieldReturn(self, didUpdate: inputTextField.text ?? " ")
         navigationController?.popViewController(animated: true)
-        
         return true
     }
 }
