@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ViewController5.swift
 //  LearningUI
 //
 //  Created by Сергей Гнидь on 01.10.2021.
@@ -7,15 +7,14 @@
 
 import UIKit
 
-class SecondUIViewController: UIViewController {
+class FifthUIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Second ViewController"
+        title = "Fifth ViewController"
     }
     
     @IBAction private func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
-
 }

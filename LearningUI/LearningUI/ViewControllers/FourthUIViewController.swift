@@ -7,21 +7,20 @@
 
 import UIKit
 
-class ViewController4: UIViewController {
+class FourthUIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Fourth ViewController"
+        title = "Fourth ViewController"
     }
     
     @IBAction private func makeNavController() {
-        let fiveViewController: ViewController5 = UIStoryboard.instantiateViewController()
+        let fiveViewController: FifthUIViewController = UIStoryboard.instantiateViewController()
        
-        self.navigationController?.pushViewController(fiveViewController, animated: true)
+        navigationController?.pushViewController(fiveViewController, animated: true)
     }
     
     @IBAction private func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
         dismiss(animated: true)
     }
-    
 }

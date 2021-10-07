@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Vc" id="BYZ-38-t0r" customClass="ViewController" customModule="LearningUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="LearningUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="1686" y="-16"/>
         </scene>
-        <!--View Controller4-->
+        <!--FourthUI View Controller-->
         <scene sceneID="UnE-4a-6io">
             <objects>
-                <viewController storyboardIdentifier="ViewController4" id="zS3-9E-4ge" customClass="ViewController4" customModule="LearningUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FourthUIViewController" id="zS3-9E-4ge" customClass="FourthUIViewController" customModule="LearningUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pq3-Pt-z9Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="726.5625"/>
         </scene>
-        <!--View Controller5-->
+        <!--FifthUI View Controller-->
         <scene sceneID="jHu-Wi-lIc">
             <objects>
-                <viewController storyboardIdentifier="ViewController5" id="Cfe-WE-6XU" customClass="ViewController5" customModule="LearningUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FifthUIViewController" id="Cfe-WE-6XU" customClass="FifthUIViewController" customModule="LearningUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q7A-Gi-pb3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

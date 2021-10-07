@@ -17,11 +17,10 @@ class ThirdUIViewController: UIViewController {
         label.textAlignment = .center
         label.text = "Third ViewController"
         label.font = label.font.withSize(25)
-        self.view.addSubview(label)
+        view.addSubview(label)
     }
     
     @IBAction private func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
         dismiss(animated: true)
     }
-    
 }
