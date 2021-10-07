@@ -7,15 +7,14 @@
 
 import UIKit
 
-class ViewController5: UIViewController {
+class FifthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Fifth ViewController"
+        title = "Fifth ViewController"
     }
     
     @IBAction func goToPrevScreeenTouchUpInside(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
-
 }
