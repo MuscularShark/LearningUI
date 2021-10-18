@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3C03BD271DB9B2008932C0 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3C03BC271DB9B2008932C0 /* AlertView.xib */; };
+		5C3C03BF271DBC6A008932C0 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C03BE271DBC6A008932C0 /* AlertView.swift */; };
 		5CCF781F27030BD400D8B8C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF781E27030BD400D8B8C1 /* AppDelegate.swift */; };
 		5CCF782127030BD400D8B8C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF782027030BD400D8B8C1 /* SceneDelegate.swift */; };
 		5CCF782327030BD400D8B8C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF782227030BD400D8B8C1 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C3C03BC271DB9B2008932C0 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		5C3C03BE271DBC6A008932C0 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		5CCF781B27030BD400D8B8C1 /* LearningUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCF781E27030BD400D8B8C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CCF782027030BD400D8B8C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				5CCF782027030BD400D8B8C1 /* SceneDelegate.swift */,
 				5CCF782227030BD400D8B8C1 /* ViewController.swift */,
 				5CCF782427030BD400D8B8C1 /* Main.storyboard */,
+				5C3C03BC271DB9B2008932C0 /* AlertView.xib */,
+				5C3C03BE271DBC6A008932C0 /* AlertView.swift */,
 				5CCF782727030BD500D8B8C1 /* Assets.xcassets */,
 				5CCF782927030BD500D8B8C1 /* LaunchScreen.storyboard */,
 				5CCF782C27030BD500D8B8C1 /* Info.plist */,
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCF782B27030BD500D8B8C1 /* LaunchScreen.storyboard in Resources */,
+				5C3C03BD271DB9B2008932C0 /* AlertView.xib in Resources */,
 				5CCF782827030BD500D8B8C1 /* Assets.xcassets in Resources */,
 				5CCF782627030BD400D8B8C1 /* Main.storyboard in Resources */,
 			);
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CCF782327030BD400D8B8C1 /* ViewController.swift in Sources */,
+				5C3C03BF271DBC6A008932C0 /* AlertView.swift in Sources */,
 				5CCF781F27030BD400D8B8C1 /* AppDelegate.swift in Sources */,
 				5CCF782127030BD400D8B8C1 /* SceneDelegate.swift in Sources */,
 			);
