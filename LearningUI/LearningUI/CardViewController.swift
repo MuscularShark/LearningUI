@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CardViewController: UIViewController {
 
     @IBOutlet private weak var seconCard: UIImageView!
     
