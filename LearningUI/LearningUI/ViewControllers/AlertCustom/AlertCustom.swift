@@ -8,18 +8,14 @@
 import UIKit
 
 protocol AlertDelegate {
-    func actionBtn()
+    func pressActionButton()
 }
 
 class AlertCustom: UIView {
-
     @IBOutlet weak var stackView: UIStackView!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var messageLabel: UILabel!
-    
-    @IBOutlet weak var actionBtn: UIButton!
+    @IBOutlet weak var actionButton: UIButton!
     
     var delegate: AlertDelegate?
     
@@ -31,7 +27,7 @@ class AlertCustom: UIView {
     func set(title: String, message: String, buttonTitle: String) {
         titleLabel.text = title
         messageLabel.text = message
-        actionBtn.setTitle(buttonTitle, for: .normal)
+        actionButton.setTitle(buttonTitle, for: .normal)
     }
     
     private func setupStackView() {
@@ -39,7 +35,7 @@ class AlertCustom: UIView {
         stackView.layer.borderColor = UIColor.white.cgColor
     }
     
-    @IBAction private func actionBtn(_ sender: UIButton) {
-        delegate?.actionBtn()
+    @IBAction private func pressActionButton(_ sender: UIButton) {
+        delegate?.pressActionButton()
     }
 }

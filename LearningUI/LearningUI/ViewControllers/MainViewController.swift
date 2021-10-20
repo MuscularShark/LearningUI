@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  LearningUI
 //
 //  Created by Сергей Гнидь on 28.09.2021.
@@ -8,13 +8,12 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
     private lazy var alert: AlertCustom = {
         let alert: AlertCustom = AlertCustom.loadFromNib()
         alert.delegate = self
         return alert
     }()
-    
+
     private let visualEffectView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .dark)
         let view = UIVisualEffectView(effect: blurEffect)
@@ -26,13 +25,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupVisualEffectView()
     }
-    
+
     private func setupAlert() {
         view.addSubview(alert)
         alert.center = view.center
         alert.set(title: "Title", message: "Some message", buttonTitle: "OK")
     }
-    
+
     private func setupVisualEffectView() {
         view.addSubview(visualEffectView)
         visualEffectView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -41,9 +40,9 @@ class MainViewController: UIViewController {
         visualEffectView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         visualEffectView.alpha = 0
     }
-    
+
     private func animateIn() {
-        alert.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        alert.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         alert.alpha = 0
         UIView.animate(withDuration: 0.4, animations: {
             self.visualEffectView.alpha = 1
@@ -51,13 +50,13 @@ class MainViewController: UIViewController {
             self.alert.transform = CGAffineTransform.identity
         })
     }
-    
+
     private func animateOut() {
         UIView.animate(withDuration: 0.4, animations: {
             self.visualEffectView.alpha = 0
             self.alert.alpha = 0
-            self.alert.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-        }) { (_) in
+            self.alert.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        }) { _ in
             self.alert.removeFromSuperview()
         }
     }
@@ -68,9 +67,10 @@ class MainViewController: UIViewController {
     }
 }
 
+// MARK: - AlertDelegate
+
 extension MainViewController: AlertDelegate {
-    func actionBtn() {
+    func pressActionButton() {
         animateOut()
     }
 }
-
