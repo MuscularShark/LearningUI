@@ -54,7 +54,7 @@
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="pressActionButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="cn5-b6-TBC"/>
+                                <action selector="actionButtonShouldPressing:" destination="iN0-l3-epB" eventType="touchUpInside" id="HyR-kK-jaF"/>
                             </connections>
                         </button>
                     </subviews>
@@ -80,7 +80,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="actionButton" destination="TxP-Bl-VjT" id="NpY-XK-smf"/>
+                <outlet property="actionButton" destination="TxP-Bl-VjT" id="Yb4-Rd-5zR"/>
                 <outlet property="messageLabel" destination="p71-PL-p4D" id="wNE-9R-Z0t"/>
                 <outlet property="stackView" destination="psm-Qs-1XR" id="Hag-dp-NWU"/>
                 <outlet property="titleLabel" destination="Xrk-VM-zih" id="XNx-ar-hfM"/>

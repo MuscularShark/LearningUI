@@ -70,7 +70,7 @@ class MainViewController: UIViewController {
 // MARK: - AlertDelegate
 
 extension MainViewController: AlertDelegate {
-    func pressActionButton() {
+    func actionButtonShouldPressing() {
         animateOut()
     }
 }

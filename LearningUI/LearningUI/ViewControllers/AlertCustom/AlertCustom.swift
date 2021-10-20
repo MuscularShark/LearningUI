@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AlertDelegate {
-    func pressActionButton()
+    func actionButtonShouldPressing()
 }
 
 class AlertCustom: UIView {
@@ -35,7 +35,7 @@ class AlertCustom: UIView {
         stackView.layer.borderColor = UIColor.white.cgColor
     }
     
-    @IBAction private func pressActionButton(_ sender: UIButton) {
-        delegate?.pressActionButton()
+    @IBAction private func actionButtonShouldPressing(_ sender: UIButton) {
+        delegate?.actionButtonShouldPressing()
     }
 }
