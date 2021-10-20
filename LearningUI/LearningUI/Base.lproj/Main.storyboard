@@ -95,14 +95,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backCard" destination="QaY-Kf-ybG" id="cMp-d4-hfe"/>
+                        <outlet property="backCardImageView" destination="QaY-Kf-ybG" id="Zni-Ws-uR2"/>
                         <outlet property="cardView" destination="cAc-hQ-t6h" id="7bS-R9-zIs"/>
                         <outlet property="constraintX" destination="FUq-oW-498" id="8oy-o9-Ej8"/>
                         <outlet property="constraintY" destination="aWU-Wf-PCe" id="aYw-Bb-Vbw"/>
-                        <outlet property="firstCard" destination="dxA-n8-iIX" id="Ipp-EC-eJJ"/>
-                        <outlet property="hints" destination="JE1-NA-5RX" id="zK0-iV-fZ2"/>
-                        <outlet property="seconCard" destination="SiI-pi-cyn" id="mWj-WW-gSD"/>
-                        <outlet property="tryBtn" destination="CyX-yd-wKj" id="8td-Fc-wHs"/>
+                        <outlet property="firstCardImageView" destination="dxA-n8-iIX" id="Nbe-9N-nlh"/>
+                        <outlet property="hintsLabel" destination="JE1-NA-5RX" id="4XL-FP-Xgh"/>
+                        <outlet property="seconCardImageView" destination="SiI-pi-cyn" id="41s-8L-FAq"/>
+                        <outlet property="tryButton" destination="CyX-yd-wKj" id="ytw-wT-5lB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

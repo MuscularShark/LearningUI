@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CardViewController.swift
 //  LearningUI
 //
 //  Created by Сергей Гнидь on 28.09.2021.
@@ -8,22 +8,14 @@
 import UIKit
 
 class CardViewController: UIViewController {
-
-    @IBOutlet private weak var seconCard: UIImageView!
-    
-    @IBOutlet private weak var firstCard: UIImageView!
-    
-    @IBOutlet private weak var backCard: UIImageView!
-    
+    @IBOutlet private weak var seconCardImageView: UIImageView!
+    @IBOutlet private weak var firstCardImageView: UIImageView!
+    @IBOutlet private weak var backCardImageView: UIImageView!
     @IBOutlet private weak var cardView: UIView!
-    
     @IBOutlet private weak var constraintY: NSLayoutConstraint!
-    
     @IBOutlet private weak var constraintX: NSLayoutConstraint!
-    
-    @IBOutlet private weak var hints: UILabel!
-    
-    @IBOutlet private weak var tryBtn: UIButton!
+    @IBOutlet private weak var hintsLabel: UILabel!
+    @IBOutlet private weak var tryButton: UIButton!
     
     private var defaultX: CGFloat = 0
     
@@ -57,8 +49,8 @@ class CardViewController: UIViewController {
     }
 
     private func setupGestures() {
-        tapGestureRecognizer.addTarget(self, action: #selector(tapGesture(_ :)))
-        panGestureRecognizer.addTarget(self, action: #selector(panGesture(_ :)))
+        tapGestureRecognizer.addTarget(self, action: #selector(tapGesture(_:)))
+        panGestureRecognizer.addTarget(self, action: #selector(panGesture(_:)))
 
         cardView.addGestureRecognizer(tapGestureRecognizer)
         cardView.addGestureRecognizer(panGestureRecognizer)
@@ -90,16 +82,20 @@ class CardViewController: UIViewController {
         })
     }
     
-    private func rotateCard(card: UIView, angle: CGFloat){
+    private func rotateCard(card: UIView, angle: CGFloat) {
         UIView.animate(withDuration: 0.3, animations: {
             card.transform = CGAffineTransform.identity.rotated(by: angle)
         })
     }
     
-    @IBAction private func clickTry(_ sender: UIButton) {
-        tryBtn.isHidden = true
-        hints.text = "Tap to card"
+    private func actionTryAgain() {
+        tryButton.isHidden = true
+        hintsLabel.text = "Tap to card"
         constraintX.constant = defaultX
+    }
+    
+    @IBAction private func clickTry(_ sender: UIButton) {
+        actionTryAgain()
         addCard(card: cardView)
     }
     
@@ -107,17 +103,17 @@ class CardViewController: UIViewController {
         UIView.animate(withDuration: 0.4, animations: {
             switch state {
             case .left:
-                self.hints.text = "You swiped card left"
+                self.hintsLabel.text = "You swiped card left"
                 self.constraintX.constant -= self.valueOut
-                self.tryBtn.isHidden = false
+                self.tryButton.isHidden = false
             case .right:
-                self.hints.text = "You swiped card right"
+                self.hintsLabel.text = "You swiped card right"
                 self.constraintX.constant += self.valueOut
-                self.tryBtn.isHidden = false
+                self.tryButton.isHidden = false
             case .center:
-                self.hints.text = "Not enought to swipe"
+                self.hintsLabel.text = "Not enought to swipe"
                 self.constraintX.constant = self.defaultX
-                self.tryBtn.isHidden = true
+                self.tryButton.isHidden = true
             }
             self.view.layoutIfNeeded()
         })
@@ -126,18 +122,18 @@ class CardViewController: UIViewController {
     @objc private func tapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
         guard tapGestureRecognizer === gestureRecognizer else { return }
         
-        guard let second = seconCard, let first = firstCard else { return }
+        guard let second = seconCardImageView, let first = firstCardImageView else { return }
         
         switch tapGestureRecognizer.state {
         case .ended:
             if coutOfRotate == 0 {
                 updateCard(card1: second, card2: first, scale: true)
-                hints.text = "Tap again to close card"
+                hintsLabel.text = "Tap again to close card"
                 coutOfRotate = 1
             }
             else {
                 updateCard(card1: first, card2: second, scale: false)
-                hints.text = "You can swipe card left or right"
+                hintsLabel.text = "You can swipe card left or right"
                 coutOfRotate = 0
             }
         default:
@@ -180,4 +176,3 @@ class CardViewController: UIViewController {
         }
     }
 }
-
