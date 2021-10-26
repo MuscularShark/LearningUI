@@ -118,11 +118,9 @@ class CardViewController: UIViewController {
             case .left:
                 self.hintsLabel.text = "You swiped card left"
                 constant.constant -= self.valueOut
-                self.tryButton.isHidden = false
             case .right:
                 self.hintsLabel.text = "You swiped card right"
                 constant.constant += self.valueOut
-                self.tryButton.isHidden = false
             case .center:
                 self.hintsLabel.text = "Not enought to swipe"
                 constant.constant = self.defaultX
@@ -154,7 +152,13 @@ class CardViewController: UIViewController {
         }
     }
     
-    @objc private func panGesture(_ gestureRecognizer: UITapGestureRecognizer) {
+    
+    
+    
+    
+    
+    
+    @objc private func panGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
         guard panGestureRecognizer === gestureRecognizer else { return }
         
         switch panGestureRecognizer.state {
@@ -162,9 +166,12 @@ class CardViewController: UIViewController {
             backCardView.isHidden = true
             backCardView.transform = .identity
             secondConstraintX.constant = defaultX
+            view.sendSubviewToBack(backCardView)
+            view.bringSubviewToFront(cardView)
             panGestureAnchorPoint = gestureRecognizer.location(in: view)
         case .changed:
             backCardView.isHidden = false
+            backEffect(card: backCardView, scaleX: 1.04, scaleY: 1.04)
             guard let panGestureAnchorPoint = panGestureAnchorPoint else { return }
             
             let gesturePoint = gestureRecognizer.location(in: view)
@@ -178,6 +185,7 @@ class CardViewController: UIViewController {
                 rotateCard(card: cardView, angle: -0.3)
             }
         case .ended:
+            backEffect(card: backCardView, scaleX: 1, scaleY: 1)
             if constraintX.constant < -50 {
                 getOut(state: .left, constant: constraintX)
             }
@@ -193,14 +201,29 @@ class CardViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @objc private func secondPanGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
         guard secondPanGestureRecognizer === gestureRecognizer else { return }
         
         switch secondPanGestureRecognizer.state {
         case .began:
+            cardView.isHidden = true
+            cardView.transform = .identity
+            constraintX.constant = defaultX
+            view.sendSubviewToBack(cardView)
+            view.bringSubviewToFront(backCardView)
             panGestureAnchorPoint = gestureRecognizer.location(in: view)
             print("Ok")
         case .changed:
+            cardView.isHidden = false
             guard let panGestureAnchorPoint = panGestureAnchorPoint else { return }
             
             let gesturePoint = gestureRecognizer.location(in: view)
