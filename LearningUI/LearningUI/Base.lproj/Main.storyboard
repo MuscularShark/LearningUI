@@ -18,14 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-Kf-ybG">
-                                <rect key="frame" x="101" y="276.5" width="212" height="353"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="212" id="8tz-xC-3qm"/>
-                                    <constraint firstAttribute="height" constant="353" id="dUh-8R-50H"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAc-hQ-t6h">
                                 <rect key="frame" x="88" y="238.5" width="238" height="429"/>
                                 <subviews>
@@ -47,6 +39,29 @@
                                     <constraint firstAttribute="height" constant="429" id="hVZ-IM-hyW"/>
                                     <constraint firstAttribute="trailing" secondItem="SiI-pi-cyn" secondAttribute="trailing" constant="4" id="n9H-Xh-ACt"/>
                                     <constraint firstItem="SiI-pi-cyn" firstAttribute="top" secondItem="cAc-hQ-t6h" secondAttribute="top" constant="41" id="w49-9H-ChM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdJ-Lx-6Zu">
+                                <rect key="frame" x="88" y="238.5" width="238" height="429"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backCard" translatesAutoresizingMaskIntoConstraints="NO" id="RBm-ei-dF0">
+                                        <rect key="frame" x="4" y="41" width="230" height="347"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="y5t-4U-ivh">
+                                        <rect key="frame" x="4" y="41" width="230" height="347"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="y5t-4U-ivh" secondAttribute="trailing" constant="4" id="L37-dc-TPy"/>
+                                    <constraint firstAttribute="height" constant="429" id="V9f-OS-Swz"/>
+                                    <constraint firstItem="y5t-4U-ivh" firstAttribute="top" secondItem="kdJ-Lx-6Zu" secondAttribute="top" constant="41" id="VeA-RS-SWO"/>
+                                    <constraint firstItem="y5t-4U-ivh" firstAttribute="leading" secondItem="kdJ-Lx-6Zu" secondAttribute="leading" constant="4" id="k3v-Jw-UE5"/>
+                                    <constraint firstAttribute="bottom" secondItem="y5t-4U-ivh" secondAttribute="bottom" constant="41" id="zZI-y2-cEI"/>
+                                    <constraint firstAttribute="width" constant="238" id="zgI-oU-aGq"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JE1-NA-5RX">
@@ -83,25 +98,26 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QaY-Kf-ybG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3wO-Lq-VgA"/>
+                            <constraint firstItem="kdJ-Lx-6Zu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6Gk-FI-5oV"/>
                             <constraint firstItem="JE1-NA-5RX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="1.5" constant="35" id="Cc8-to-7z0"/>
                             <constraint firstItem="cAc-hQ-t6h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FUq-oW-498"/>
                             <constraint firstItem="CyX-yd-wKj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Nin-VW-hwe"/>
-                            <constraint firstItem="QaY-Kf-ybG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Oms-pb-aBH"/>
                             <constraint firstItem="CyX-yd-wKj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PaX-1G-ifC"/>
                             <constraint firstItem="cAc-hQ-t6h" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aWU-Wf-PCe"/>
                             <constraint firstItem="JE1-NA-5RX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="h49-A2-Eph"/>
+                            <constraint firstItem="kdJ-Lx-6Zu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jEK-cs-UMx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JE1-NA-5RX" secondAttribute="trailing" constant="80" id="nKq-Ng-9Pg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backCardImageView" destination="QaY-Kf-ybG" id="Zni-Ws-uR2"/>
+                        <outlet property="backCardView" destination="kdJ-Lx-6Zu" id="sfl-Pg-SFI"/>
                         <outlet property="cardView" destination="cAc-hQ-t6h" id="7bS-R9-zIs"/>
                         <outlet property="constraintX" destination="FUq-oW-498" id="8oy-o9-Ej8"/>
                         <outlet property="constraintY" destination="aWU-Wf-PCe" id="aYw-Bb-Vbw"/>
                         <outlet property="firstCardImageView" destination="dxA-n8-iIX" id="Nbe-9N-nlh"/>
                         <outlet property="hintsLabel" destination="JE1-NA-5RX" id="4XL-FP-Xgh"/>
                         <outlet property="seconCardImageView" destination="SiI-pi-cyn" id="41s-8L-FAq"/>
+                        <outlet property="secondConstraintX" destination="jEK-cs-UMx" id="VJv-pv-Ltm"/>
                         <outlet property="tryButton" destination="CyX-yd-wKj" id="ytw-wT-5lB"/>
                     </connections>
                 </viewController>

@@ -10,12 +10,13 @@ import UIKit
 class CardViewController: UIViewController {
     @IBOutlet private weak var seconCardImageView: UIImageView!
     @IBOutlet private weak var firstCardImageView: UIImageView!
-    @IBOutlet private weak var backCardImageView: UIImageView!
     @IBOutlet private weak var cardView: UIView!
     @IBOutlet private weak var constraintY: NSLayoutConstraint!
     @IBOutlet private weak var constraintX: NSLayoutConstraint!
     @IBOutlet private weak var hintsLabel: UILabel!
     @IBOutlet private weak var tryButton: UIButton!
+    @IBOutlet weak var backCardView: UIView!
+    @IBOutlet weak var secondConstraintX: NSLayoutConstraint!
     
     private var defaultX: CGFloat = 0
     
@@ -24,6 +25,10 @@ class CardViewController: UIViewController {
     private let tapGestureRecognizer = UITapGestureRecognizer()
     
     private let panGestureRecognizer = UIPanGestureRecognizer()
+    
+    private let secondPanGestureRecognizer = UIPanGestureRecognizer()
+    
+    
     
     private var coutOfRotate = 0
     
@@ -51,9 +56,11 @@ class CardViewController: UIViewController {
     private func setupGestures() {
         tapGestureRecognizer.addTarget(self, action: #selector(tapGesture(_:)))
         panGestureRecognizer.addTarget(self, action: #selector(panGesture(_:)))
+        secondPanGestureRecognizer.addTarget(self, action: #selector(secondPanGesture(_:)))
 
         cardView.addGestureRecognizer(tapGestureRecognizer)
         cardView.addGestureRecognizer(panGestureRecognizer)
+        backCardView.addGestureRecognizer(secondPanGestureRecognizer)
     }
 
     private func updateCard(card1: UIImageView, card2: UIImageView, scale: Bool) {
@@ -99,20 +106,26 @@ class CardViewController: UIViewController {
         addCard(card: cardView)
     }
     
-    private func getOut(state: State) {
+    func backEffect(card: UIView, scaleX: CGFloat, scaleY: CGFloat) {
+        UIView.animate(withDuration: 0.8, animations: {
+            card.transform = CGAffineTransform(scaleX: scaleX, y: scaleY)
+        })
+    }
+    
+    private func getOut(state: State, constant: NSLayoutConstraint) {
         UIView.animate(withDuration: 0.4, animations: {
             switch state {
             case .left:
                 self.hintsLabel.text = "You swiped card left"
-                self.constraintX.constant -= self.valueOut
+                constant.constant -= self.valueOut
                 self.tryButton.isHidden = false
             case .right:
                 self.hintsLabel.text = "You swiped card right"
-                self.constraintX.constant += self.valueOut
+                constant.constant += self.valueOut
                 self.tryButton.isHidden = false
             case .center:
                 self.hintsLabel.text = "Not enought to swipe"
-                self.constraintX.constant = self.defaultX
+                constant.constant = self.defaultX
                 self.tryButton.isHidden = true
             }
             self.view.layoutIfNeeded()
@@ -146,8 +159,12 @@ class CardViewController: UIViewController {
         
         switch panGestureRecognizer.state {
         case .began:
+            backCardView.isHidden = true
+            backCardView.transform = .identity
+            secondConstraintX.constant = defaultX
             panGestureAnchorPoint = gestureRecognizer.location(in: view)
         case .changed:
+            backCardView.isHidden = false
             guard let panGestureAnchorPoint = panGestureAnchorPoint else { return }
             
             let gesturePoint = gestureRecognizer.location(in: view)
@@ -162,14 +179,51 @@ class CardViewController: UIViewController {
             }
         case .ended:
             if constraintX.constant < -50 {
-                getOut(state: .left)
+                getOut(state: .left, constant: constraintX)
             }
             else if constraintX.constant > 50 {
-                getOut(state: .right)
+                getOut(state: .right, constant: constraintX)
             }
             else {
-                getOut(state: .center)
+                getOut(state: .center, constant: constraintX)
                 rotateCard(card: cardView, angle: 0)
+            }
+        default:
+            break
+        }
+    }
+    
+    @objc private func secondPanGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
+        guard secondPanGestureRecognizer === gestureRecognizer else { return }
+        
+        switch secondPanGestureRecognizer.state {
+        case .began:
+            panGestureAnchorPoint = gestureRecognizer.location(in: view)
+            print("Ok")
+        case .changed:
+            guard let panGestureAnchorPoint = panGestureAnchorPoint else { return }
+            
+            let gesturePoint = gestureRecognizer.location(in: view)
+            backEffect(card: cardView, scaleX: 1.04, scaleY: 1.04)
+            secondConstraintX.constant += gesturePoint.x - panGestureAnchorPoint.x
+            self.panGestureAnchorPoint = gesturePoint
+            if secondConstraintX.constant > 0 {
+                rotateCard(card: backCardView, angle: 0.3)
+            }
+            if secondConstraintX.constant < 0 {
+                rotateCard(card: backCardView, angle: -0.3)
+            }
+        case .ended:
+            backEffect(card: cardView, scaleX: 1, scaleY: 1)
+            if secondConstraintX.constant < -50 {
+                getOut(state: .left, constant: secondConstraintX)
+            }
+            else if secondConstraintX.constant > 50 {
+                getOut(state: .right, constant: secondConstraintX)
+            }
+            else {
+                getOut(state: .center, constant: secondConstraintX)
+                rotateCard(card: backCardView, angle: 0)
             }
         default:
             break
